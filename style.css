@@ -59,7 +59,7 @@ main{
 
 
 .card{
-    width: 238px;
+    width: clamp(130px, 40% ,238px);
 }
 
 .card-down{
@@ -71,7 +71,7 @@ main{
 }
 
 .image-position img {
-    width: 238px;
+    width: 100%;
     margin-bottom: 15px;
 }
 
@@ -85,5 +85,52 @@ main{
 .name{
     font-family:'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+/* --- MEDIA QUERY PHONES --- */
+
+@media only screen and (max-width: 375px) {
+
+    body{
+        padding: 19px;
+    }
+
+    main{
+        gap: 43px;
+    }
+
+    .card{
+        width: 110px;
+    }
+    
+    .card-down{
+        margin-top: 0px;
+    }
+
+    .card-mobile{
+        margin-top: 50px;
+    }
+
+    .image-position img {
+        width: 110px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1115px) {
+
+    main{
+        gap: 10%;
+    }
+
+    .card-down{
+        margin-top: 0px;
+    }
+
+    .card-mobile{
+        margin-top: 70px;
+    }
+    
 }
